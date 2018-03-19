@@ -1,0 +1,44 @@
+Clave wifi: *utp-3v3Nt2018
+
+Paso 1
+
+Crear una carpeta server
+
+Paso 2
+
+Mover todo lo que no es cliente
+a la carpeta server menos .gitignore
+.editorconfig
+
+Paso 3
+
+hacer un commit para actualizar los datos
+git commit -m "clean server app structuture"
+
+paso 4
+hacer un push origin master
+
+paso 5
+agregar las historias y las cartas ordenadas
+en el github
+
+paso 6
+crear una carpeta src dentro de server
+y mover lo que es codigo dentro de ella 
+app y routes
+
+paso 7
+crear una carpeta test dentro de server
+
+paso 8
+instalar las dependencias de pruebas dentro
+de la carpeta de server
+
+npm install --save-dev chai mocha supertest
+
+mocha 
+es la que se necesita ejecutar las pruebas
+
+chai
+es una dependencias assetchan
+

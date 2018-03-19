@@ -1,10 +1,9 @@
-const express = require('express');
+const express = require('expres');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
-const index = require('./routes/index');
-const users = require('./routes/users');
+const threadsRouter= require('./routes/threads');//dependencias relativas
 
 const app = express();
 
@@ -12,8 +11,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 
 
-app.use('/', index);
-app.use('/users', users);
+app.use('/threads', threadsRouter);
 
 // catch 404 and forward to error handler
 app.use( (req, res, next) => {

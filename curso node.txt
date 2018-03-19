@@ -1,0 +1,28 @@
+el next se usa
+para ir a la siguiente ruta  o una definicion
+de error
+
+
+
+paso 4
+https://github.com/remy/nodemon
+instalar una nueva dependecia
+npm install --save-dev nodemon
+
+se actualiza el package.json
+en start script
+
+eliminando algunas dependencias
+
+
+paso 5
+https://reactjs.org/community/support.html
+
+https://reactjs.org/docs/introducing-jsx.html
+
+
+crear react
+create-react-app client
+
+
+jsx: trabaja con className
