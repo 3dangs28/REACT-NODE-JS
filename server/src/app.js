@@ -1,9 +1,11 @@
-const express = require('expres');
+const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
+const mongoose =require('./mongoose');
 const threadsRouter= require('./routes/threads');//dependencias relativas
+
 
 const app = express();
 

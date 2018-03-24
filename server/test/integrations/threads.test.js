@@ -1,7 +1,13 @@
-const chai = require('chai');
+const chai= require('chai');
 const request = require('supertest');
-const gato = require('mocha');
-const app = require('../../src/app');
+
+const mongooseHelper = require('./mongooseHelper');
+const fixtures=require('./fixtures');
+
+const app =require('../../src/app');
+
+//const gato = require('mocha');
+//const app = require('../../src/app');
 
 
 const expect = chai.expect;
@@ -9,6 +15,10 @@ const expect = chai.expect;
 describe('Threads endpoint', () => {
 
   describe('when calling GET /', () => {
+
+
+before(async () => await fixtures.seedThreads());
+after(async () => await mongooseHelper.dropDatabase());
 
     it('return a list of threads', () => {
       return request(app).get('/threads')
@@ -18,7 +28,7 @@ describe('Threads endpoint', () => {
         .then(response => {
           const { body } = response;
 
-          expect(body.data).to.have.lenght(2);
+          expect(body.data).to.have.length(2);
           expect(body.data[0].title).to.equal('El sistema de matricula esta dañado');
           expect(body.data[1].title).to.equal('El problema de transporte en Panama');
 
