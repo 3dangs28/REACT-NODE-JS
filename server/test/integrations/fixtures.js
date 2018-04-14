@@ -1,23 +1,27 @@
 const Thread = require('../../src/models/Thread');
 
-
 const seedThreads = async () => {
   await Thread.create([
 
     {
-      title: 'foo',
+      title: 'El sistema de matricula esta dañado',
       body: 'bar',
-      slug: '',
+      slug: 'el-sistema-de-matricula-esta-danado',
 
     },
     {
-      title: 'foo',
+      title: 'El problema de transporte en Panama',
       body: 'bar',
-      slug: '',
+      slug: 'el-problema-de-transporte-en-panama',
     },
   ]);
 };
 
+//const seed2Threads = async () => {
+//};
+
 module.exports = {
+
   seedThreads,
+ // seed2Threads,
 };
